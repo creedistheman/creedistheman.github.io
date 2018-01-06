@@ -31,9 +31,9 @@ function getPrice() {
         cache: false,
         dataType: "json"
     }).then(function (data) {
-        if (data == null) return null;
-        if (data.result == null) return null;
-        if (data.result.ethusd == null) return null;
+        if (data == null) return 1000;
+        if (data.result == null) return 1000;
+        if (data.result.ethusd == null) return 1000;
 
         return parseFloat(data.result.ethusd);
     });
