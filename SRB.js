@@ -65,7 +65,7 @@ function updatePage(stats) {
     $("#total-tokens").text(stats.totalSupply.toFixed(3));
     if (stats.totalSupply <= 0) {
         $("#total-tokens-message").text("No Schrute Buck issued yet either.");
-    } else if (stats.totalBonusTokensIssued.toNumber() <= 0) {
+    } else {
         $("#total-tokens-message").text("Look at all those Schrute Buck!");
     }
 
