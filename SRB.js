@@ -24,21 +24,6 @@ function getStats(price) {
         dataType: "json"
     }).then(function (data) { return decodeStats(data, price); });
 }
-
-function getPrice() {
-    var url = "https://api.etherscan.io/api?module=stats&action=ethprice";
-    return $.ajax(url, {
-        cache: false,
-        dataType: "json"
-    }).then(function (data) {
-        if (data == null) return 1000;
-        if (data.result == null) return 1000;
-        if (data.result.ethusd == null) return 1000;
-
-        return parseFloat(data.result.ethusd);
-    });
-}
-
 function updatePage(stats) {
     console.log(stats);
     if (stats == null) return;
@@ -72,7 +57,7 @@ function updatePage(stats) {
     $("#stats").show();
 }
 
-function refresh() { getPrice().then(getStats).then(updatePage); }
+function refresh() { getStats(1000).then(updatePage); }
 
 $(function() {
     try {
