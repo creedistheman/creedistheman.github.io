@@ -1,0 +1,36 @@
+body {
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+}
+
+.center {
+	display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+.stat-block {
+	display: inline-block;
+	width: 30%;
+	border-color: #111;
+}
+
+.scroll-point {
+    position: relative;
+    top: -3.5rem;
+}
+
+.bg {
+    background-color: #93d693;
+}
+
+.jumbotron.jumbotron-fluid {
+    background: url(jumbotron.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.75);
+}
